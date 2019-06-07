@@ -1,4 +1,4 @@
-package org.gnuton.test.test;
+package org.gnuton.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

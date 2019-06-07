@@ -5,3 +5,15 @@ server:
     error:
         whitelabel:
             enabled: true
+
+## Actuator endpoints
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        beans:
+            id: springbeans
+            sensitive: false
+            enabled: true

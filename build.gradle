@@ -19,16 +19,28 @@ configurations {
     }
 }
 
-// compile vs implementation vs api
-// implementation: do not expose dependencies of the lib
-// api/compile: expose lib deps
-dependencies {
-    testAnnotationProcessor "org.projectlombok:lombok"
-    testCompileOnly "org.projectlombok:lombok"
+// Gradle deps
+// compileOnly — for dependencies that are necessary to compile your production code but shouldn’t be part of the runtime classpath
+// implementation (supersedes compile) — used for compilation and runtime
+// runtimeOnly (supersedes runtime) — only used at runtime, not for compilation
+// testCompileOnly — same as compileOnly except it’s for the tests
+// testImplementation — test equivalent of implementation
+// testRuntimeOnly — test equivalent of runtimeOnly
 
-    compile 'org.springframework.boot:spring-boot-starter-actuator',
-            'org.springframework.boot:spring-boot-starter-web'
-    
+dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    annotationProcessor "org.projectlombok:lombok"
+    compileOnly "org.projectlombok:lombok"
+
+    // runtime deps
+    // compile and runtime
+    // only compile
+    compile 'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-actuator' // App monitoring, gathers metrics, understand traffic, Db status http://localhost:8083/actuator/
+
+    // Test - runtime only
+    // Test - compile and runtime
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    // Test - compile only
+    testCompileOnly "org.projectlombok:lombok"
 }

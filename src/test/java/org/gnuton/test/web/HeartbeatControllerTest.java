@@ -1,4 +1,4 @@
-package org.gnuton.test.test.web;
+package org.gnuton.test.web;
 
 import org.junit.Test;
 

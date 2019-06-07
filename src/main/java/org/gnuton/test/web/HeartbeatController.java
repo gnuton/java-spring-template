@@ -1,4 +1,4 @@
-package org.gnuton.test.test.web;
+package org.gnuton.test.web;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
