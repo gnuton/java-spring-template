@@ -1,2 +1,2 @@
-# java-spring-template
-stupid basic java spring boot template
+# Basic Java Spring template
+Java spring template is a simple CRUD REST microservice.

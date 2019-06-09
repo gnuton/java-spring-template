@@ -19,10 +19,16 @@ server:
 
 ## Actuator endpoints
 management:
+    # port: 9001
     endpoints:
         web:
             exposure:
                 include: "*"
+    datasource:
+        url: 'jdbc:'
+        username: ''
+        password: ''
+        driver-class-name: 'org.apache.derby.jdbc.ClientDriver'
     endpoint:
         beans:
             id: springbeans
