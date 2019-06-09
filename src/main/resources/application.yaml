@@ -1,3 +1,14 @@
+# ===================================================================
+# COMMON SPRING BOOT PROPERTIES
+#
+# This sample file is provided as a guideline. Do NOT copy it in its
+# entirety to your own application.               ^^^
+# ===================================================================
+# From https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+debug: false # Enable debug logs.
+trace: false # Enable trace logs.
+
 server:
     port: 8083
     servlet:
@@ -17,3 +28,8 @@ management:
             id: springbeans
             sensitive: false
             enabled: true
+
+spring:
+    devtools:
+        livereload:
+            enabled: false

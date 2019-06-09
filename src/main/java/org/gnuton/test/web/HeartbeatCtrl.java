@@ -9,7 +9,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @RequestMapping(value = "/heartbeat", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-public class HeartbeatController {
+public class HeartbeatCtrl {
     @ResponseBody
     @RequestMapping(method = GET)
     public Boolean getHearthbeat() {
