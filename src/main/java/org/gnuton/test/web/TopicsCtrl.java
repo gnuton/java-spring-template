@@ -1,8 +1,7 @@
 package org.gnuton.test.web;
 
-import jdk.nashorn.internal.ir.RuntimeNode;
 import org.gnuton.test.services.TopicsSrv;
-import org.gnuton.test.web.models.Topic;
+import org.gnuton.test.models.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,6 +1,6 @@
 package org.gnuton.test.services;
 
-import org.gnuton.test.web.models.Topic;
+import org.gnuton.test.models.Topic;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
