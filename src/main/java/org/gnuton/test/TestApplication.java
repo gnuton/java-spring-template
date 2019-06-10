@@ -1,9 +1,11 @@
 package org.gnuton.test;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 // Web apps are typically made of three layers:
 // 1. web       - initial point of client communication - here we can find @Controller classes
@@ -19,6 +21,11 @@ public class TestApplication {
 	@Bean
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
+	}
+
+	@Bean // the reactive way to make web calls. Will replace RestTemplate.
+	public WebClient.Builder getWebclientBuilder() {
+		return WebClient.builder();
 	}
 
 	public static void main(String[] args) {

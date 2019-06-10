@@ -35,8 +35,8 @@ dependencies {
     // compile and runtime
     // only compile
     compile 'org.springframework.boot:spring-boot-starter-web',
-            'org.springframework.boot:spring-boot-starter-actuator' // App monitoring, gathers metrics, understand traffic, Db status http://localhost:8083/actuator/
-
+            'org.springframework.boot:spring-boot-starter-actuator', // App monitoring, gathers metrics, understand traffic, Db status http://localhost:8083/actuator/
+            'org.springframework.boot:spring-boot-starter-webflux'  // Adds reactive(async) libs
     // Test - runtime only
     // Test - compile and runtime
     testCompile 'org.springframework.boot:spring-boot-starter-test'
