@@ -1,6 +1,7 @@
 package org.gnuton.test.web;
 
 import org.gnuton.test.models.Topic;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +12,11 @@ import java.util.Arrays;
 
 @RestController
 public class HealthCtrl {
+    @Autowired
+    private RestTemplate r;
+
     @GetMapping("/health")
     public ResponseEntity<Object> run(){
-        RestTemplate r = new RestTemplate();
-
         // sending a post
         Topic topicToAdd = new Topic("testId", "testName", "testDesc");
         r.postForObject("http://localhost:8083/topics", topicToAdd, Topic.class);
