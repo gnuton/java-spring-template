@@ -1,3 +1,12 @@
+```
+     ____.                     ___________                   .__          __          
+    |    |____ ___  _______    \__    ___/___   _____ ______ |  | _____ _/  |_  ____  
+    |    \__  \\  \/ /\__  \     |    |_/ __ \ /     \\____ \|  | \__  \\   __\/ __ \ 
+/\__|    |/ __ \\   /  / __ \_   |    |\  ___/|  Y Y  \  |_> >  |__/ __ \|  | \  ___/ 
+\________(____  /\_/  (____  /   |____| \___  >__|_|  /   __/|____(____  /__|  \___  >
+              \/           \/               \/      \/|__|             \/          \/ 
+
+```
 # Opinionated Java Spring template
 This repo holds two small projects, a service discovery and a generic REST microservice.
 The service discovery is a simple Eureka server which allows to the microservice client to talk to other microservices without knowing the real URL. Look a the other features the microservice offers out of the box.
