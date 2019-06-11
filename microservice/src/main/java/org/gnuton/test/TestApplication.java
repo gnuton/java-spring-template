@@ -3,6 +3,8 @@ package org.gnuton.test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,10 +17,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 // This annotation initiate the scans of the components in the same page and below
 @SpringBootApplication // same as@Configuration @EnableAutoConfiguration @ComponentScan
+@EnableEurekaClient // not mandatory
 public class TestApplication {
 
 	@Deprecated // the future is webclient
 	@Bean
+	@LoadBalanced // Eureka: It does server discovery in load balance wy
+	              // it says the URL is not real, but an eureka url to disoover
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
 	}

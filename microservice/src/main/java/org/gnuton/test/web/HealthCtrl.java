@@ -19,10 +19,12 @@ public class HealthCtrl {
     public ResponseEntity<Object> run(){
         // sending a post
         Topic topicToAdd = new Topic("testId", "testName", "testDesc");
-        r.postForObject("http://localhost:8083/topics", topicToAdd, Topic.class);
+        // The URL here is not a real one but it's resolved by eureka
+        // to run this be sure eureka server is runnning
+        r.postForObject("http://my-microservice:8083/topics", topicToAdd, Topic.class);
 
         // This  shows how to get GET data and deserialize an array of JSONs
-        Topic[] topics = r.getForObject("http://localhost:8083/topics", Topic[].class);
+        Topic[] topics = r.getForObject("http://my-microservice:8083/topics", Topic[].class);
         int nOfTestTopics = (int) Arrays.stream(topics).filter(t->t.getId().equals(topicToAdd.getId())).count();
 
         if (nOfTestTopics < 5){

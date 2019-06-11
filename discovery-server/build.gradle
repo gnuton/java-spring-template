@@ -18,7 +18,10 @@ ext {
 }
 
 dependencies {
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server',
+			'javax.xml.bind:jaxb-api',
+			'org.glassfish.jaxb:jaxb-runtime'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
