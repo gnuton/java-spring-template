@@ -8,7 +8,7 @@ Import the two projects and run boot. Import the postman collection into postman
 # Features
 * Spring MVC with annotations
 * Basic data persistence
-* In Mem data base for development (Apache Derby)
+* In Mem database for development (Apache Derby)
 * Postman collection
 * Load balancing/Sevice discovery - Handled by Eureka (https://spring.io/guides/gs/service-registration-and-discovery/)
 * Fault tollerance/Resilience [TODO] - Circuit breaker/ Hystrix (https://spring.io/guides/gs/circuit-breaker/) https://dzone.com/articles/libraries-for-microservices-development
